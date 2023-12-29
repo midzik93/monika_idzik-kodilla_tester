@@ -13,7 +13,7 @@ public class User {
     public String getName(){
        return name;
     }
-    //metoda zwracająca wiek
+    //metoda zwracająca wiek.
     public int getAge(){
        return age;
     }
