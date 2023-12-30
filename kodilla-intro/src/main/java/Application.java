@@ -6,6 +6,10 @@ public class Application {
     public static void main (String[] args){
         Application application = new Application ("Adam", 25, 178.5);
         application.checkUserApplication();
+
+            Application applicationdwa = new Application ("Karolina", 45, 178.5);
+            applicationdwa.checkUserApplication();
+
     }
 
     public Application (String name, int age, double height) {

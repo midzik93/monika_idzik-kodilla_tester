@@ -17,6 +17,11 @@ public class User {
     public int getAge(){
        return age;
     }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public static void main(String[] args){
 
        //inicjowanie tablicy o rozmiarze 10
@@ -31,7 +36,7 @@ public class User {
         users[5]= new User("Anna", 25);
         users[6]= new User("Lucyna", 60);
         users[7]= new User("Katarzyna", 28);
-
+users[0].setAge(1000);
 
 
         //obliczanie sumy wieku users
