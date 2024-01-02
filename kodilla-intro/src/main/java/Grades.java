@@ -13,12 +13,12 @@ public class Grades {
 
     //metoda dodająca przekazaną w argumencie ocenę do tablicy
     public void addGrade(int grade) {
-        if (this.size == 10) {
+        if (size == 10) {
             System.out.println("Nie można dodać oceny do tablicy");
             return;    //przerywamy metodę
         }
-        this.grades[this.size] = grade;
-        this.size++;
+        grades[size] = grade;
+        size++;
     }
 
     //metoda zwracająca ostatnią ocenę
@@ -47,8 +47,8 @@ public class Grades {
         }
         double avarage = sum / grades.length;
         System.out.println("Srednia z ocen to: " + avarage);
-return avarage;
+        return avarage;
     }
-  }
+}
 
 
