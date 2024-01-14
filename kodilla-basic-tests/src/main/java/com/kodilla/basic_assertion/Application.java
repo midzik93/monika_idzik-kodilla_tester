@@ -36,5 +36,6 @@ public class Application {
             System.out.println("Metoda działa niepoprawnie dla tego zestawu danych");
 
         }
+
     }
 }
