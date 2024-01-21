@@ -6,7 +6,7 @@ public class Task {
 
     public Task(String title, int duration) {
         this.title = title;
-        this.duration=duration;
+        this.duration = duration;
     }
 
     public int getDuration() {
