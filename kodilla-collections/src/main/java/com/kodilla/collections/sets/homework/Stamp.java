@@ -7,10 +7,11 @@ public class Stamp {
     private double dimension;
 
     private boolean stamped;
+
     public Stamp(String name, double dimension, boolean stamped) {
         this.dimension = dimension;
         this.name = name;
-        this.stamped=stamped;
+        this.stamped = stamped;
     }
 
     public String getName() {
