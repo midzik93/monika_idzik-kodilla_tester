@@ -31,4 +31,5 @@ public class School {
         }
         return sum;
     }
+
 }

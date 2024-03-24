@@ -6,9 +6,10 @@ import com.kodilla.collections.interfaces.homework.Car;
 public class CarUtils {
 
     //metodą statyczną opisującą samochody
-    public static void describeCar(Car car){
+    public static String describeCar(Car car){
         System.out.println(car);
 
 
+        return null;
     }
 }

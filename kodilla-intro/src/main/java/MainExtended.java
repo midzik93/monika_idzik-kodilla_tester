@@ -4,7 +4,7 @@ public class MainExtended {
         int seniority = 3;
         double salary = 7000.500;
         boolean irreplaceable = false;
-        char englishLevel= 'B';
+        char englishLevel = 'B';
 
         System.out.println(myProfession);
         System.out.println(salary);

@@ -3,6 +3,7 @@ package com.kodilla.stream;
 import java.util.Objects;
 
 public class User {
+
     // reprezentuje użytkownika systemu
 
     private String username;

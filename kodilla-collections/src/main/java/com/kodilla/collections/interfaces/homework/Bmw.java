@@ -24,4 +24,11 @@ public class Bmw implements Car {
 
         speed -= 10;
     }
+
+    @Override
+    public String toString() {
+        return "Bmw{" +
+                "speed=" + speed +
+                '}';
+    }
 }

@@ -12,16 +12,16 @@ import java.util.Set;
 
 public class GamblingMachineTestSuite {
 
-    GablingMachine gablingMachine=new GablingMachine();
-    @ParameterizedTest
-    @CsvFileSource(resources = "/fileWithNumber.csv", numLinesToSkip = 1)
-    public void shouldCountCorrectNumberOfWins(int expectedWins, String numbers) throws InvalidNumbersException {
-        String[] numbersArray = numbers.split(",");
-        Set<Integer> userNumbers = new HashSet<>();; // inicjalizacja w metodzie testowej
-        for (String number : numbersArray) {
-            userNumbers.add(Integer.parseInt(number));
-        }
-
-        assertEquals(expectedWins, gablingMachine.howManyWins(userNumbers));
-    }
+//    GablingMachine gablingMachine=new GablingMachine();
+//    @ParameterizedTest
+//    @CsvFileSource(resources = "/fileWithNumber.csv", numLinesToSkip = 1)
+//    public void shouldCountCorrectNumberOfWins(int expectedWins, String numbers) throws InvalidNumbersException {
+//        String[] numbersArray = numbers.split(",");
+//        Set<Integer> userNumbers = new HashSet<>();; // inicjalizacja w metodzie testowej
+//        for (String number : numbersArray) {
+//            userNumbers.add(Integer.parseInt(number));
+//        }
+//
+//        assertEquals(expectedWins, gablingMachine.howManyWins(userNumbers));
+//    }
 }

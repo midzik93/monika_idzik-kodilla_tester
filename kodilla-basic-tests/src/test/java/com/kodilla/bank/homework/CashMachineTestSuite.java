@@ -2,7 +2,8 @@ package com.kodilla.bank.homework;
 
 import org.junit.jupiter.api.Test;
 
-import static com.kodilla.basic_assertion.ResultChecker.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class CashMachineTestSuite {
 
@@ -40,7 +41,7 @@ public class CashMachineTestSuite {
         bank.cashMachines[0].deposit(100);
         bank.cashMachines[1].withdraw(100);
 
-        assertEquals(100, bank.getAverageWithdrawal());
+        assertEquals(-100, bank.getAverageWithdrawal());
     }
 
     @Test

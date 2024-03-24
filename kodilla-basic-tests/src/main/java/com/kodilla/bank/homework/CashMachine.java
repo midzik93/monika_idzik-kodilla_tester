@@ -20,12 +20,10 @@ public class CashMachine {
     }
 
     public void withdraw(int amount) {
-        if (amount < 0) {
             int[] newTransaction = new int[size + 1];
             newTransaction[size] = -amount;
             transactions = newTransaction;
             size++;
-        }
     }
 
     public int getBalance() {

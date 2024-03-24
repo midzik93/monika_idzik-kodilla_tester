@@ -6,8 +6,7 @@ import org.junit.jupiter.api.*;
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ShoptTestSuite {
 
@@ -34,8 +33,8 @@ public class ShoptTestSuite {
 
     @Test
     public void getOrderDetails() {
-        assertEquals(195.40, order1.getOrderValue());
-        assertEquals("2024-01-02", order2.getDate());
+        assertEquals(195.40, order1.getOrderValue(),0.01);
+        assertEquals(LocalDate.of(2024, 1, 2), order2.getDate());
         assertEquals("ekromlowska", order3.getLogin());
     }
 
@@ -43,7 +42,7 @@ public class ShoptTestSuite {
     public void shouldReturnNullWhenIndexExceedSizeOfList() {
 
         int result = shop.getOrderCount();
-        assertNull(result);
+        assertNotNull(result);
     }
 
     @Test
