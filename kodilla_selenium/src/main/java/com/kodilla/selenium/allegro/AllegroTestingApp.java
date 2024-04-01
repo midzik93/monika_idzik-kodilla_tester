@@ -12,16 +12,19 @@ public class AllegroTestingApp {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "C:/selenium-drivers/Chrome/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--remote-allow-origins=*");   //po co to jest
+        chromeOptions.addArguments("--remote-allow-origins=*");
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://allegro.pl/");
 
-
-        WebElement categoryDropdown = driver.findElement(By.xpath("//select[@class=\"mgmw_wo\"]"));
+        WebElement categoryDropdown = driver.findElement(By.cssSelector("select[data-role='filters-dropdown-toggle']"));
         Select categorySelect = new Select(categoryDropdown);
         categorySelect.selectByValue("/kategoria/elektronika");
 
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
+        WebElement searchInput = driver.findElement(By.cssSelector("input[name='string']"));
+        searchInput.sendKeys("Mavic mini");
+
+        WebElement searchButton = driver.findElement(By.cssSelector("button[data-role='search-button']"));
+        searchButton.click();
+
     }
 }
