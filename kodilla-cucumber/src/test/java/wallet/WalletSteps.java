@@ -11,18 +11,35 @@ public class WalletSteps {
 
     private final Wallet wallet= new Wallet();
     private final CashSlot cashSlot = new CashSlot();
-    @Given("I have deposited $200 in my wallet")
-    public void i_have_deposited_$200_in_my_wallet() {
-        wallet.deposit(200);
-       assertEquals(200, wallet.getBalance());
+    private int requestedAmount;
+    private int dispensedAmount;
+    @Given("I have deposited {int} in my wallet")
+    public void i_have_deposited_in_my_wallet(Integer balance) {
+
+            wallet.deposit(balance);
+
+        assertEquals(balance, wallet.getBalance());
     }
-    @When("I request $30")
-    public void i_request_$30() {
-        Cashier cashier=new Cashier(cashSlot);
-        cashier.withdraw(wallet, 30);
+
+    @When("I request {int}")
+    public void i_request(Integer withdrawalAmount) {
+    Cashier cashier=new Cashier(cashSlot);
+    cashier.withdraw(wallet,withdrawalAmount);
+        requestedAmount=withdrawalAmount;
     }
-    @Then("$30 should be dispensed")
-    public void $30_should_be_dispensed() {
-        assertEquals(30, cashSlot.getContents());
+
+    @Then("{int} should be dispensed")
+    public void should_be_dispensed(Integer withdrawalMoney) {
+       dispensedAmount = cashSlot.getContents();
+       assertEquals(withdrawalMoney, dispensedAmount);
     }
+
+    @Given("I have deposited N\\/A in my wallet")
+    public void i_have_deposited_n_a_in_my_wallet(Integer balance) {
+        if (balance != null) {
+            wallet.deposit(balance);
+        }
+        assertEquals(balance, wallet.getBalance());
+    }
+
 }
