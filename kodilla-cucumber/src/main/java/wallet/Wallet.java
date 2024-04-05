@@ -11,7 +11,14 @@ public class Wallet {
             this.balance += money;
         }
     }
-
+    public boolean debit(int money) {
+        if (balance >= money) {
+            this.balance -= money;
+            return true;
+        } else {
+            return false;
+        }
+    }
     public int getBalance(){
         return balance;
     }
