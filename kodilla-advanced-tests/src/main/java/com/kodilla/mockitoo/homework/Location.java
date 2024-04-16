@@ -1,5 +1,6 @@
 package com.kodilla.mockitoo.homework;
 
+
 public class Location {
     private String name;
 

@@ -1,5 +1,6 @@
 package com.kodilla.mockitoo.homework;
 
+
 public class Person {
     private String email;
 

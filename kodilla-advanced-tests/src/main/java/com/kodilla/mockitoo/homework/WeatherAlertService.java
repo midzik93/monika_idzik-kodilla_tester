@@ -1,5 +1,6 @@
 package com.kodilla.mockitoo.homework;
 
+
 public interface WeatherAlertService {
 
     void subscribe (Person person, Location location);
