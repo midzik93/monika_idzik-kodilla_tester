@@ -8,9 +8,6 @@ public class Application {
         int b = 8;
         int sumResult = calculator.sum(a, b);
 
-        //by sprawdzić czy wynik jest poprawny używamy metody assertEquals
-        //z klasy ResultChecker który zwraca wartość boolean
-        //wartość boolean można przypisać do zmiennej
 
         boolean correct = ResultChecker.assertEquals(13, sumResult);
         if (correct) {
@@ -36,6 +33,5 @@ public class Application {
             System.out.println("Metoda działa niepoprawnie dla tego zestawu danych");
 
         }
-
     }
 }
